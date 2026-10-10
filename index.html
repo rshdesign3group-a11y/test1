@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#14231d">
+  <title>Rabbit Run: Carrot Trials</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">AN ENDLESS SKILL CHALLENGE · FIVE BIOMES</p>
+        <h1>Rabbit Run <span>🍃</span></h1>
+      </div>
+      <div class="wallet" aria-label="Carrot points balance">
+        <span class="carrot">🥕</span><div><small>CARROT POINTS</small><strong id="balance">25</strong></div>
+      </div>
+    </header>
+
+    <section class="game-card">
+      <div class="hud">
+        <div><small>STAGE</small><strong id="stage">01</strong></div>
+        <div><small>SCORE</small><strong id="score">0</strong></div>
+        <div><small>BEST</small><strong id="best">0</strong></div>
+        <div><small>DIFFICULTY</small><strong id="difficulty">HARD</strong></div>
+      </div>
+      <div class="canvas-wrap">
+        <canvas id="game" width="960" height="480" aria-label="Rabbit running game"></canvas>
+        <div id="overlay" class="overlay">
+          <div class="overlay-panel">
+            <div class="rabbit-icon">🐇</div>
+            <p class="eyebrow" id="overlay-kicker">THE BURROW IS CALLING</p>
+            <h2 id="overlay-title">Ready for the Carrot Trials?</h2>
+            <p id="overlay-copy">Jump over traps, survive each stage, and earn carrots. This run starts hard — there are no easy opening levels.</p>
+            <div class="entry-line"><span>Entry fee</span><strong>🥕 <span id="entry-cost">5</span> carrots</strong></div>
+            <button id="play-btn">ENTER THE TRIALS <span>→</span></button>
+            <p class="tiny" id="overlay-note">Keyboard: Space / ↑ to jump · Tap the game to jump</p>
+          </div>
+        </div>
+      </div>
+      <div class="controls-row">
+        <span><kbd>SPACE</kbd> / <kbd>↑</kbd> Jump</span>
+        <span><kbd>↓</kbd> Duck (when grounded)</span>
+        <span class="right-note">One hit ends the run.</span>
+      </div>
+    </section>
+
+    <section class="bottom-grid">
+      <article class="info-card">
+        <p class="eyebrow">HOW TO PLAY</p>
+        <h3>Every carrot is earned.</h3>
+        <p>Clear a stage to receive a carrot bonus. Obstacles get faster and tighter as you go. The run is endless until you hit a trap.</p>
+      </article>
+      <article class="info-card stats-card">
+        <div><p class="eyebrow">YOUR RECORD</p><h3 id="record-line">No run completed yet.</h3></div>
+        <button class="secondary" id="reset-btn" title="Reset local game progress">Reset progress</button>
+      </article>
+    </section>
+    <footer>CARROT TRIALS · A browser prototype · Progress is saved on this device</footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
